@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Raleway&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand brand" href="#">PES FIELDS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="mr-auto">
+        </div>
+
+        <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link text-nav" href="#">My Booking </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-nav" href="#">Booking History</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-nav" href="#">Book Now </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-nav" href="#">Settings </a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link text-nav" href="#">Login </a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="container-fluid wide fit-lg">
+      <div class="img-banner bg-img">
+        <img src="img/banner.png" class="" alt="">
+      </div>
+      <div class="container box-up  d-flex justify-content-center">
+            <div class="box-lg">
+              <div class="heading">
+                Book a turf
+              </div>
+              <form class="" action="index.html" method="post">
+                <div class="days">
+                  <div class="heading-sm">
+                    Date
+                  </div>
+
+                  <div class="day" for="date1">
+                    <label for="date1">Today</label><br>
+                    <label for="date1">08-12-2019</label>
+                    <input type="radio" class=""  onchange="red(this)" name="date" id="date1" value="">
+                  </div>
+                  <div class="day">
+                    <label for="date2">Today</label><br>
+                    <label for="date2">08-12-2019</label>
+                    <input type="radio" class=""  onchange="red(this)" name="date" id="date2" value="">
+                  </div>
+                  <div class="day">
+                    <label for="date3">Today</label><br>
+                    <label for="date3">08-12-2019</label>
+                    <input type="radio" class=""  onchange="red(this)" name="date" id="date3" value="">
+                  </div>
+
+                </div>
+
+                <div class="times">
+                  <div class="heading-sm">
+                    Time
+                  </div>
+                  <div class="">
+                    <div class="time">
+                      <input type="radio" class="" on onchange="red(this)" name="check" id="check2" value="">
+                      <label for="check2">8:00 PM</label>
+                    </div>
+                    <div class="time">
+                      <input type="radio" class=""  onchange="red(this)" name="check" id="check1" value="">
+                      <label for="check1">9:00 PM</label>
+                    </div>
+                    <div class="time">
+                      <input type="radio" class=""  onchange="red(this)" name="check" id="check6" value="">
+                      <label for="check6">9:00 PM</label>
+                    </div>
+                    <div class="time">
+                      <input type="radio" class=""  onchange="red(this)" name="check" id="check3" value="">
+                      <label for="check3">9:00 PM</label>
+                    </div>
+                    <div class="time">
+                      <input type="radio" class=""  onchange="red(this)" name="check" id="check4" value="">
+                      <label for="check4">9:00 PM</label>
+                    </div>
+                    <div class="time">
+                      <input type="radio" class=""  onchange="red(this)" name="check" id="check5" value="">
+                      <label for="check5">9:00 PM</label>
+                    </div>
+
+                  </div>
+                  </div>
+
+                  <div class="durations">
+                    <div class="heading-sm">
+                      Duration
+                    </div>
+                    <div class="duration">
+                      1 HR
+                    </div>
+                  </div>
+                  <div class="price">
+                    <div class="rate">
+                      ₹1200.00
+                    </div>
+                    <div class="offer">
+                      10%
+                    </div>
+                    <div class="offerrate">
+                      ₹1180.00
+                    </div>
+                  </div>
+
+                  <div class="payable">
+                    <div class="heading-sm">
+                      
+                    </div>
+                    <div class="payment">
+                      <div class="desc">
+                        Total registraion fee: &nbsp;₹1100.00
+                      </div>
+                      <div class="desc-md">
+                        Balance amount payable at venue: &nbsp;₹910.00
+                      </div>
+                      <div class="booking-rate">
+                        Reservation amount payable:
+                        <div class="amt">
+                          ₹<input type="number" name="" value="110.00" readonly>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="terms">
+                    <div class="heading-mini">
+                      Reservation Policy
+                    </div>
+                    <div class="terms-txt">
+                      Reservation is made by only paying advance.
+                      Reservation will be cancelled after 5 minutes of reservation time, if not reported.
+                      Automatically cancelled amount willnot be refunded.
+                      Rescheduling is not allowed.
+                      If we detect any Fraud activity, Reservation will be cancelled with action.
+                      By clicking paynow button you are accepting our conditions.
+                    </div>
+                    <div class="heading-mini">
+                      Cancellation Policy
+                    </div>
+                    <div class="terms-txt">
+                      Cancellation is allowed 1hr before Reserved time.
+                      Cancellation amount will not be refunded.
+                    </div>
+                  </div>
+                  <div class="paybtnt">
+                    <button type="submit" class="paynow" name="button">Pay Now</button>
+                  </div>
+
+              </form>
+            </div>
+      </div>
+    </div>
+    <br>
+
+    <script>
+      function red(d){
+        if(d.checked=true){
+          var nodes=d.parentNode.parentNode.childNodes;
+            for(var i=0; i<nodes.length; i++) {
+                if (nodes[i].nodeName.toLowerCase() == 'div') {
+                     nodes[i].style.background = "white";
+                     nodes[i].style.color="black";
+                 }
+            }
+            d.parentNode.style.background="#007bff";
+            d.parentNode.style.color="white";
+        }
+      }
+    </script>
+
+
+
+
+
+    <div class="container-fluid wide">
+      <div class="pecoad black">
+        designed by <a href="wwww.pecoad.com">PECOAD.COM</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

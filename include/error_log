@@ -1,0 +1,5 @@
+[03-Aug-2020 11:57:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'pecoqykt_pesfields'@'localhost' (using password: YES) in /home/pecoadse/pesfields.com/include/db.php on line 9
+[22-Aug-2020 15:54:29 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'pecoqykt_pesfields'@'localhost' (using password: YES) in /home/pecoadse/pesfields.com/include/db.php on line 9
+[04-Oct-2020 09:07:23 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'pecoqykt_pesfields'@'localhost' (using password: YES) in /home/pecoadse/pesfields.com/include/db.php on line 9
+[06-Oct-2020 19:14:26 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'pecoqykt_pesfields'@'localhost' (using password: YES) in /home/pecoadse/pesfields.com/include/db.php on line 9
+[11-Nov-2020 08:13:22 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'pecoqykt_pesfields'@'localhost' (using password: YES) in /home4/pecoadse/pesfields.com/include/db.php on line 9

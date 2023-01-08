@@ -1,0 +1,182 @@
+<?php
+
+require('include/db.php');
+						if(isset($_GET['from']) && isset($_GET['to'])){
+	$from=get_safe_value($con,$_GET['from']);
+	$to=get_safe_value($con,$_GET['to']);
+}
+?>
+<div class="content pb-0" id='printMe'>
+<div class="content pb-0">
+
+	<div class="orders">
+	   <div class="row">
+		  <div class="col-xl-12">
+			 <div class="card">
+				<div class="card-body">
+				   <h4 class="box-title">Finance Report:</h4>
+				   <h5><?php  if(isset($_GET['from']) && isset($_GET['to'])) echo $from ." : ". $to ;
+				               if(isset($_GET['all']))echo "Finance till Today (".date('d-m-Y').")";?></h5>
+				   <h4 class="box-link"><a href="reports.php">Back</a> </h4>
+				</div>
+				<div class="card-body--">
+				   <div class="table-stats order-table ov-h">
+					  <table class="table ">
+						 <thead>
+							<tr>
+							   <th class="serial">#</th>
+							   <th>date</th>
+							   
+							   <th>Amount</th>
+							      <?php if(isset($_GET['all'])){  ?>
+							  
+							  
+							    
+							   <?php }?>
+							   <th>Date</th>
+							   <?php if(!isset($_GET['all'])){  ?>
+							   <th>Username</th>
+							   <?php }?>
+							   <!-- <th>Cust_id</th> -->
+							   <th></th>
+							</tr>
+						 </thead>
+						 <tbody>
+						<?php 
+							
+							if(isset($_GET['from']) && isset($_GET['to'])){
+								$i=1;$p=0;$tot=0;$totpr=0;
+	$from=get_safe_value($con,$_GET['from']);
+	$to=get_safe_value($con,$_GET['to']);
+	if($to=='')
+	{
+		$to=date("Y-m-d");
+	}
+		$sr="select booking.*,user.* from booking,user where booking.uid=user.id AND booking.date BETWEEN DATE('$from') AND DATE('$to')";
+	$res=mysqli_query($con,$sr);
+	if(!$res)
+	{
+		echo "fgfdg.".mysqli_error($con);
+	}
+
+
+		while ($row=mysqli_fetch_assoc($res)){
+			
+			$dat=$row['date'];
+			
+			$su=$row['rate'];
+			$tot+=$su;
+			
+?>
+
+
+
+							<tr>
+							   <td class="serial"><?php echo $i?></td>
+							   <td><?php echo $row['date']?></td>
+							   <td><?php echo $row['rate']?></td>
+							 
+							    
+							</tr>
+							<?php 
+							  $i+=1;
+						      }} ?>
+
+	<?php 
+							
+							if(isset($_GET['all'])){
+								$i=1;$p=0;$st=0;$totpr=0;
+
+		$sr="select booking.*,user.* from booking,user where booking.uid=user.id AND booking.date <= CURDATE()";
+	$res=mysqli_query($con,$sr);
+	if(!$res)
+	{
+		echo "fgfdg.".mysqli_error($con);
+	}
+
+
+			while ($row=mysqli_fetch_assoc($res)){
+			
+			$dat=$row['date'];
+			
+			$su=$row['rate'];
+			$tot+=$su;
+			
+?>          
+
+
+
+							<tr>
+							   <td class="serial"><?php echo $i?></td>
+							   <td><?php echo $row['date']?></td>
+							   <td><?php echo $row['rate']?></td>
+							
+							    	
+							</tr>
+							<?php 
+							  $i+=1;
+						      }} ?>
+						 </tbody>
+					  </table>
+					  <table class="table ">
+						 <thead>
+							<tr>
+							   <th class="serial"></th>
+							  
+							   
+							   
+							</tr>
+						 </thead>
+						 <tbody>
+
+							<tr>
+							   <td class="serial"></td>
+							   
+							   <td><?php echo $p?></td>
+							    <td><?php if(isset($_GET['all'])){echo number_format($st)." Rs";}if(isset($_GET['from']) && isset($_GET['to'])){echo number_format($tot)." Rs";}?></td>
+							</tr>
+						</tbody>
+					</table>
+						  <table class="table ">
+						 <thead>
+							<tr>
+							   <th class="serial"></th>
+							   
+							  
+							   <th>Total Profit</th>
+							   
+							   
+							</tr>
+						 </thead>
+						 <tbody>
+
+							<tr>
+							   <td class="serial"></td>
+							   
+							  
+							    <td><?php echo number_format($totpr)." Rs";?></td>
+							</tr>
+						</tbody>
+					</table>
+				   </div>
+				</div>
+			 </div>
+		  </div>
+	   </div>
+	</div>
+</div>
+            <input type="button" onClick="printDiv('printMe')" value="Print"/>
+<script>
+        function printDiv(divName){
+            var printContents = document.getElementById(divName).innerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;
+
+            window.print();
+
+            document.body.innerHTML = originalContents;
+
+        }
+
+    </script>
